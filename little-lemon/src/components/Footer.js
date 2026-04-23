@@ -13,9 +13,9 @@ function Footer(){
     </nav>
     <h2>Contact</h2>
     <ul>
-        <li>Address</li>
-        <li>Phone</li>
-        <li>Email</li>
+        <li>123 S Main St Chicago, IL</li>
+        <li>(123)-456-7890</li>
+        <li>contact@littlelemon.com</li>
     </ul>
     <h2>Social Media Links</h2>
     <ul>
