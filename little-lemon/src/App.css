@@ -1,38 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&display=swap');
+
 .App {
   text-align: center;
+  --brand-yellow: #F4CE14;
+  --brand-green: #495E57;
+  --light-grey: #EDEFEE;
+  --dark-grey: #333333;
+  --peach: #EE9972;
+  --nude: #FBDABB;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Karla';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,h2{
+  font-family: 'Markazi Text';
+  font-size: 64px;
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h3{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+p{
+  font-size: 16px;
+}
+
+p.leadText{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p.highlight{
+  font-weight: 500;
+}
+
+#mainNav ul li{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+  "header nav"
+  /*"hero hero"
+  "highlights highlights"
+  "reviews reviews"
+  "about about"*/
+  "main main"
+  "footer footer";
+}
+
+header{
+  grid-area: header;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+#mainNav{ grid-area: nav;}
+main{grid-area: main;}
+footer{
+  grid-area: footer;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+#mainNav ul{
+  display: flex;
+  justify-content: space-evenly;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul{
+  padding: 0;
+  list-style: none;
 }
+
+footer img{
+  max-height: 124px;
+  align-self: center;
+}
+
+footer li{
+  font-size: 16px;
+  font-weight: 800;
+}
+
+
+@media screen
+and (max-width: 900px) {
+    .container{
+        grid-template-columns: 
+        1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    }
+    footer{
+      flex-wrap: wrap;
+    }
+  }
+
+@media screen
+and (max-width: 750px) {
+    footer{
+      flex-flow: column;
+    }
+  }

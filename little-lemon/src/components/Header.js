@@ -1,7 +1,9 @@
+import logo from '../Logo.svg'
+
 function Header(){
     return (
     <header>
-        <img src="./public/Logo.svg" alt="Little Lemon Logo"/>
+        <img src={logo} alt="Little Lemon Logo"/>
     </header>
     );
 }
