@@ -25,22 +25,45 @@ h3{
   font-weight: 700;
 }
 
+.subTitle{
+  display: block;
+  font-family: 'Markazi Text';
+  font-size: 40px;
+}
+
 p{
   font-size: 16px;
 }
 
-p.leadText{
+/*If not applying, add back p and then add comma with link.*/
+.leadText{
   font-size: 18px;
   font-weight: 500;
 }
 
-p.highlight{
+.highlight{
   font-weight: 500;
 }
 
 #mainNav ul li{
   font-size: 20px;
   font-weight: 500;
+}
+
+button{
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #F4CE14;
+}
+
+button:hover{
+  background-color: #495E57;
+  color: white;
+}
+
+button.greenBkrd:hover{
+  background-color: black;
+  color: #F4CE14;
 }
 
 .container{
