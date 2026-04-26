@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 22px;
+    row-gap: 24px;
 }
 
 #testimonials h2{

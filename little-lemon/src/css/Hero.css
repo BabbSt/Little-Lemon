@@ -28,6 +28,7 @@ h1{
     grid-area: picture;
     width: 360px;
     height: 275px;
+    max-width: 100%;
     align-self: center;
     justify-self: end;
 }

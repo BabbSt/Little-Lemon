@@ -52,3 +52,11 @@
 .card p{
     color: #495E57;
 }
+
+@media screen
+and (max-width:1074px) {
+    .cardContainer{
+        justify-content: center;
+        row-gap: 24px;
+    }
+}

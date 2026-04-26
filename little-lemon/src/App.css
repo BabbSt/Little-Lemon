@@ -18,6 +18,7 @@ h1,h2{
   font-family: 'Markazi Text';
   font-size: 64px;
   font-weight: 500;
+  line-height: 50px;
 }
 
 h3{
@@ -164,15 +165,29 @@ and (max-width: 900px) {
         "footer";
     }
     header{
+      margin: 0;
       justify-content: center;
     }
+    #mainNav ul{
+      justify-content: space-evenly;
+    }
+
     footer{
       flex-wrap: wrap;
     }
+    footer nav,
+    footer section{
+      padding-left: 10%;
+    }
   }
 
+/*@media screen
+and (max-width: 895px) {
+  footer
+}*/
+
 @media screen
-and (max-width: 750px) {
+and (max-width: 895px) {
     footer{
       flex-flow: column;
     }
