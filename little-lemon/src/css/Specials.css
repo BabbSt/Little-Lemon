@@ -1,0 +1,54 @@
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    justify-content: center;
+}
+
+.specialsHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card{
+    width: 265px;
+    background-color:#EDEFEE;
+    border-radius: 16px 16px 0 0;
+}
+
+.card img:not(.card img.icon){
+    width: 265px;
+    height: 185px;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+}
+
+/*wrap title and price in div, set both to display inline*/
+
+.cardText{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0 16px 10px;
+    height: 194px;
+}
+
+.cardText a{
+    align-self: end;
+}
+
+.cardHeading{
+    display: flex;
+    justify-content: space-between;
+    width: stretch;
+}
+
+.cardHeading h3,
+.cardHeading p{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.card p{
+    color: #495E57;
+}

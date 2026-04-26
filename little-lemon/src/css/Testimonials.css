@@ -1,0 +1,55 @@
+#testimonials{
+    padding-top: 1px;
+    background-color: #F4CE14;
+}
+
+#reviewContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 22px;
+}
+
+#testimonials h2{
+    text-align: center;
+}
+
+.review{
+    width: 187px;
+    height: 226px;
+    background-color: white;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+    "avatar userinfo"
+    "stars stars"
+    "content content";
+    align-content: start;
+    padding: 16px 16px 0;
+}
+.avatar{
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    grid-area: avatar;
+}
+
+.userInfo{
+    grid-area: userinfo;
+}
+
+.userInfo h3,
+.userInfo p{
+    margin: 0;
+}
+
+.starRating{
+    padding-top: 16px;
+    grid-area: stars;
+}
+
+.reviewContent{
+    grid-area: content;
+    color: #333333;
+}

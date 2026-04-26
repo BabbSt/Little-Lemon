@@ -2,10 +2,12 @@ import star from '../images/star.png';
 
 function Review(props){
     return(
-        <article>
+        <article class="review">
             <img aria-hidden="true" className="avatar" src={props.image} alt=""/>
-            <h3>{props.name}</h3>
-            <p className="highlight">{props.username}</p>
+            <div className='userInfo'>
+                <h3>{props.name}</h3>
+                <p className="highlight">{props.username}</p>
+            </div>
             <div className='starRating'>
                 <img className="star" src={star} alt='filled star'/>
                 <img className="star" src={star} alt='filled star'/>
@@ -13,7 +15,7 @@ function Review(props){
                 <img className="star" src={star} alt='filled star'/>
                 <img className="star" src={star} alt='filled star'/>
             </div>
-            <p>{props.content}</p>
+            <p className='reviewContent'>{props.content}</p>
         </article>
     );
 }

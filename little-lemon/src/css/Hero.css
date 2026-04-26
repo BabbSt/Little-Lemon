@@ -1,0 +1,53 @@
+#hero{
+    background-color: #495E57;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "title picture"
+    "content picture"
+    "button picture";
+    padding-top: 5%;
+}
+
+
+h1{
+    color:#F4CE14;
+    grid-area: title;
+    margin: 0;
+}
+
+#hero p{
+    grid-area: content;
+}
+
+#hero button{
+    grid-area: button;
+}
+
+#hero img{
+    grid-area: picture;
+    width: 360px;
+    height: 275px;
+    align-self: center;
+    justify-self: end;
+}
+
+h1 span,
+#hero p{
+    color: white;
+}
+
+@media screen
+and (max-width: 900px) {
+    #hero{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "picture"
+        "title"
+        "content"
+        "button";
+    }
+    #hero img{
+        justify-self: center;
+    }
+}

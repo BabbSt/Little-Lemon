@@ -1,8 +1,9 @@
-import platedFlight from '../images/Plated Flight.png'
+import '../css/Hero.css';
+import platedFlight from '../images/Plated Flight.png';
 
 function Hero(){
     return(
-        <section>
+        <section id="hero">
         <h1>Little Lemon <span className="subTitle">Chicago</span></h1>
         <p className="leadText">We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
         <img src={platedFlight} alt='Plated flight of bread with various toppings including prosciutto, vegetables, and seeds'/>

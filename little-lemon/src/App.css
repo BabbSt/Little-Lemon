@@ -36,7 +36,8 @@ p{
 }
 
 /*If not applying, add back p and then add comma with link.*/
-.leadText{
+.leadText,
+button{
   font-size: 18px;
   font-weight: 500;
 }
@@ -50,8 +51,11 @@ p{
   font-weight: 500;
 }
 
-nav a{
+#mainNav a{
   color: black;
+}
+
+nav a{
   text-decoration: none;
 }
 
@@ -59,6 +63,11 @@ button{
   font-size: 18px;
   font-weight: 500;
   background-color: #F4CE14;
+  width: fit-content;
+  height: fit-content;
+  padding: 8px;
+  border-radius: 16px;
+  border: none;
 }
 
 button:hover{
@@ -72,8 +81,6 @@ button.greenBkrd:hover{
 }
 
 .container{
-  max-width: 960px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-areas:
@@ -90,19 +97,26 @@ header{
   grid-area: header;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+  margin-left: 10%;
 }
-#mainNav{ grid-area: nav;}
+#mainNav{ 
+  grid-area: nav;
+  margin: 0 10%;
+}
 main{grid-area: main;}
 footer{
+  padding: 3% 0 2%;
   grid-area: footer;
+  background-color: #495E57;
   display: flex;
   justify-content: space-evenly;
 }
 
 #mainNav ul{
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 ul{
@@ -110,20 +124,37 @@ ul{
   list-style: none;
 }
 
+main section{
+  padding: 0 10% 5%;
+}
+
 footer img{
-  max-height: 124px;
+  max-height: 167px;
   align-self: center;
 }
 
-footer li{
+footer h3{
+  color: #EE9972;
+  margin-bottom: 0;
+}
+
+footer ul{
+  margin-top: 8px;
+}
+
+footer li,
+footer a{
   font-size: 16px;
   font-weight: 800;
+  color: white;
+  margin-bottom: 0.25em;
 }
 
 
 @media screen
 and (max-width: 900px) {
     .container{
+      max-width: 100%;
         grid-template-columns: 
         1fr;
         grid-template-areas: 
@@ -131,6 +162,9 @@ and (max-width: 900px) {
         "nav"
         "main"
         "footer";
+    }
+    header{
+      justify-content: center;
     }
     footer{
       flex-wrap: wrap;
