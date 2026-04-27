@@ -2,7 +2,7 @@ import star from '../images/star.png';
 
 function Review(props){
     return(
-        <article class="review">
+        <article className="review">
             <img aria-hidden="true" className="avatar" src={props.image} alt=""/>
             <div className='userInfo'>
                 <h3>{props.name}</h3>

@@ -10,7 +10,7 @@ function Card(props){
         <p className="highlight">{props.price}</p>
         </div>
         <p>{props.description}</p>
-        <a>Order a delivery <img class="icon" aria-hidden="true" src={scooterIcon}/></a>
+        <a>Order a delivery <img className="icon" aria-hidden="true" src={scooterIcon}/></a>
         </div>
     </article>
     );
