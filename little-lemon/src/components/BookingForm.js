@@ -9,8 +9,8 @@ function BookingForm(props){
             <label htmlFor="date">Date</label>
             <input type="date" id="date" name="date" value={props.date} onChange={(e) => {
                props.setDate(e.target.value);
+               props.timesDispatch({type: e.target.value});
              }}></input>
-            {/*Do weird state stuff with time*/}
             <label htmlFor="time">Time</label>
             <select id="time" name="time" value={props.time} onChange={(e) => props.setTime(e.target.value)}>
                 {times}
@@ -24,7 +24,7 @@ function BookingForm(props){
                 <option value={"Anniversary"}>Anniversary</option>
                 <option value={"Engagement"}>Engagement</option>
             </select>
-            <button type="submit">Book Table</button>
+            <button type="submit" onClick={props.submitFunction}>Book Table</button>
         </form>
     );
 }

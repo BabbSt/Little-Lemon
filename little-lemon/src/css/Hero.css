@@ -10,7 +10,7 @@
 }
 
 
-h1{
+#hero h1{
     color:#F4CE14;
     grid-area: title;
     margin: 0;
