@@ -1,25 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BookingForm from "./BookingForm";
 
 function BookingPage(props){
-    let today = new Date();
-    let todayString = today.getFullYear().toString()+"-"+(today.getMonth()+1).toString().padStart(2,'0')+"-"+today.getDate().toString().padStart(2,'0');
-    const [date, setDate] = useState(todayString);
-    const [time, setTime] = useState("6:00");
-    const [guests, setGuests] = useState(2);
-    const [occasion, setOccasion] = useState("occasion");
+   const [lastName, setLastName]=useState("");
+   let today = new Date();
+   let todayString = today.getFullYear().toString()+"-"+(today.getMonth()+1).toString().padStart(2,'0')+"-"+today.getDate().toString().padStart(2,'0');
+   //Clears values on initial render
+   useEffect(()=>{
+      props.setFirstName("");
+      props.setGuests(2);
+      props.setDate(todayString);
+      props.setTime(props.availableTimes[0]);
+      console.log(props.date);
+   },[]);
+   
+   const [occasion, setOccasion] = useState("occasion");
  return (
     <>
     <h1>Booking page</h1>
     <BookingForm 
     {...props}
-    date={date}
-    time={time}
-    guests={guests}
+    lastName={lastName}
     occasion={occasion}
-    setDate={setDate}
-    setTime={setTime}
-    setGuests={setGuests}
+    setLastName={setLastName}
     setOccasion={setOccasion}/>
     </>
  );

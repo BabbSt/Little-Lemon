@@ -1,4 +1,5 @@
 import scooterIcon from '../images/Scooter.svg';
+import { Link } from "react-router-dom";
 
 function Card(props){
     return (
@@ -10,7 +11,7 @@ function Card(props){
         <p className="highlight">{props.price}</p>
         </div>
         <p>{props.description}</p>
-        <a>Order a delivery <img className="icon" aria-hidden="true" src={scooterIcon}/></a>
+        <Link aria-label={`Order a delivery of ${props.title}`}>Order a delivery <img className="icon" aria-hidden="true" src={scooterIcon}/></Link>
         </div>
     </article>
     );
