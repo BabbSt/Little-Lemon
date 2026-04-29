@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import BookingForm from "./BookingForm";
+import '../css/Booking.css';
+import chefs from '../images/Mario and Adrian A.jpg';
 
 function BookingPage(props){
    const [lastName, setLastName]=useState("");
@@ -16,15 +18,19 @@ function BookingPage(props){
    
    const [occasion, setOccasion] = useState("occasion");
  return (
-    <>
-    <h1>Booking page</h1>
+    <div id="bookingPage">
+    <h1>Reserve a Table</h1>
+    <div id="bookingPageContent">
     <BookingForm 
     {...props}
     lastName={lastName}
     occasion={occasion}
     setLastName={setLastName}
     setOccasion={setOccasion}/>
-    </>
+    <img src={chefs} alt="Two chefs talking to each other"/>
+    </div>
+    </div>
+
  );
  
 }

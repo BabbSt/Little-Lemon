@@ -36,11 +36,23 @@ p{
   font-size: 16px;
 }
 
-/*If not applying, add back p and then add comma with link.*/
 .leadText,
-button{
+button,
+label{
   font-size: 18px;
   font-weight: 500;
+}
+
+label{
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select{
+  font-family: 'Karla';
+  font-size: 16px;
+  width: 16em;
 }
 
 .highlight{
@@ -80,6 +92,12 @@ button:hover{
 button.greenBkrd:hover{
   background-color: black;
   color: #F4CE14;
+}
+
+button:disabled,
+button:disabled:hover{
+  background-color: #EDEFEE;
+  color: #647064; /*lowest accessible contrast value*/
 }
 
 .container{

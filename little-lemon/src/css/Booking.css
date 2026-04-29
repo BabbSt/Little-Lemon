@@ -1,0 +1,103 @@
+#bookingPage{
+    padding: 0 10% 3%;
+}
+
+#bookingPageContent{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "form picture";
+}
+
+#bookingPageContent img{
+    grid-area: picture;
+    width: 272px;
+    height: 338px;
+    max-width: 100%;
+    justify-self: end;
+}
+
+#bookingForm{
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "fname lname"
+    "date time"
+    "guests guests"
+    "occasion occasion"
+    "button button";
+}
+
+#firstNameInput{
+    grid-area: fname;
+}
+
+#lastNameInput{
+    grid-area: lname;
+}
+
+#dateInput{
+    grid-area: date;
+}
+
+#timeInput{
+    grid-area: time;
+}
+
+#guestInput{
+    grid-area: guests;
+}
+
+#occasionInput{
+    grid-area: occasion;
+}
+
+#bookingForm button{
+    grid-area: button;
+    justify-self: end;
+}
+
+#bookingForm p.errorMessage{
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: darkred;
+}
+
+@media screen
+and (max-width: 1100px) {
+    #bookingPageContent{
+    grid-template-columns: 1fr 2fr;
+    }
+
+    #bookingPageContent img{
+        align-self: center;
+    }
+
+    #bookingForm{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "fname"
+    "lname"
+    "date"
+    "time"
+    "guests"
+    "occasion"
+    "button";
+    }
+
+    #bookingForm button{
+        margin-top: 16px;
+    }
+}
+
+@media screen 
+and (max-width:750px){
+    #bookingPageContent{
+    grid-template-columns: 1fr;
+    grid-template-areas: "picture" "form";
+    }
+    #bookingPageContent img{
+        justify-self: center;
+    }
+}
