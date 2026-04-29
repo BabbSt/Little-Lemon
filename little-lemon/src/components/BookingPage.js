@@ -18,7 +18,7 @@ function BookingPage(props){
    
    const [occasion, setOccasion] = useState("occasion");
  return (
-    <div id="bookingPage">
+    <div className="pageContent">
     <h1>Reserve a Table</h1>
     <div id="bookingPageContent">
     <BookingForm 

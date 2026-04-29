@@ -1,0 +1,11 @@
+#confirmBooking h1{
+    margin-bottom: 16px;
+}
+
+#confirmBooking p.subtitle{
+    margin: 0;
+}
+
+#buttonContainer{
+    text-align: right;
+}

@@ -144,7 +144,8 @@ ul{
   list-style: none;
 }
 
-main section{
+main>section,
+.pageContent{
   padding: 0 10% 5%;
 }
 

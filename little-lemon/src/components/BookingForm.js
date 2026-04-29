@@ -6,6 +6,9 @@ function BookingForm(props){
         return <option value={time}>{time}</option>
     })
 
+   let today = new Date();
+   let todayString = today.getFullYear().toString()+"-"+(today.getMonth()+1).toString().padStart(2,'0')+"-"+today.getDate().toString().padStart(2,'0');
+
     const [firstNameTouched, setFirstNameTouched] = useState(false);
     const [lastNameTouched, setLastNameTouched] = useState(false);
 
@@ -27,7 +30,7 @@ function BookingForm(props){
             </p>
             <p id="dateInput">
                 <label htmlFor="date">Date</label>
-                <input type="date" id="date" name="date" value={props.date} onChange={(e) => {
+                <input type="date" id="date" name="date" min={todayString} value={props.date} onChange={(e) => {
                 props.setDate(e.target.value);
                 props.timesDispatch({type: e.target.value});
                 }}></input>
