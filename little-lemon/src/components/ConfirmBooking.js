@@ -1,3 +1,7 @@
+/**Confirm Booking Component: Uses state set by form booking component to build out a conformation message
+ *  for the user's reservation
+ * Provides a button for user to navigate back to home page
+ */
 import '../css/ConfirmBooking.css';
 import { useNavigate } from "react-router-dom";
 

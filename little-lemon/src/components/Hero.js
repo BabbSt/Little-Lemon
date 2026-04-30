@@ -1,3 +1,5 @@
+/**Hero Component: Introductory info for Little Lemon, contains main heading for the homepage
+ * and a button that links to the table booking page*/
 import '../css/Hero.css';
 import platedFlight from '../images/Plated Flight.png';
 import { useNavigate } from "react-router-dom";

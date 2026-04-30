@@ -1,3 +1,6 @@
+/**Testimonials Component:  Calls the Review component to build out testimonials from customers
+ * Provides image, customer name, customer username, and the review text content
+*/
 import '../css/Testimonials.css';
 import Review from "./Review";
 import saraPhoto from "../images/Sara.png";

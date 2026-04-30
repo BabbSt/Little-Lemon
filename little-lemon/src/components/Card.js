@@ -1,3 +1,4 @@
+/**Card Component: Builds out the card for each weekly special*/
 import scooterIcon from '../images/Scooter.svg';
 import { Link } from "react-router-dom";
 

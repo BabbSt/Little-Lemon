@@ -1,10 +1,14 @@
-import logo from '../images/Logo\ no\ text.png'
+/*Footer Component: Builds out the footer component used at the bottom of all website pages*/
+import logo from '../images/Logo no text.png'
 import { Link } from "react-router-dom";
 
 function Footer(){
     return (<footer>
     <img src={logo} alt='Little Lemon Logo'/>
-    <nav>
+    {/**Secondary navigation
+     * aria label added based on https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role#best_practices
+    */}
+    <nav aria-label="Main">
         <h3>Doormat Navigation</h3>
         <ul>
             <li><Link to="/">Home</Link></li>
@@ -15,6 +19,7 @@ function Footer(){
             <li><Link>Login</Link></li>
         </ul>
     </nav>
+    {/**Little Lemon's contact information*/}
     <section>
     <h3>Contact</h3>
     <ul>
@@ -23,6 +28,7 @@ function Footer(){
         <li>contact@littlelemon.com</li>
     </ul>
     </section>
+    {/**Little Lemon's social media pages*/}
     <section>
     <h3>Social Media Links</h3>
     <ul>

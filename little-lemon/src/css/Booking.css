@@ -27,10 +27,12 @@
 
 #firstNameInput{
     grid-area: fname;
+    margin: 16px 0;
 }
 
 #lastNameInput{
     grid-area: lname;
+    margin: 16px 0;
 }
 
 #dateInput{

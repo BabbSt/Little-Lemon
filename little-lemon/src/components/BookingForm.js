@@ -1,33 +1,43 @@
+/**Booking Form Component: Builds out form used to gather information required for booking a reservation
+ * Updates state passed in through props based on user input
+ * Navigates to Confirm Booking component once submitter
+*/
 import { useState } from "react";
 
 function BookingForm(props){
 
     const times = props.availableTimes.map((time)=>{
-        return <option value={time}>{time}</option>
+        return <option key={time} value={time}>{time}</option>
     })
 
+   //Get today's date to set minimum allowed value for the date picker (can't pick days in past)
    let today = new Date();
    let todayString = today.getFullYear().toString()+"-"+(today.getMonth()+1).toString().padStart(2,'0')+"-"+today.getDate().toString().padStart(2,'0');
 
+   //State used to check if the user has interacted with required text fields before showing error
     const [firstNameTouched, setFirstNameTouched] = useState(false);
     const [lastNameTouched, setLastNameTouched] = useState(false);
 
+    //Check that all required fields have a value and that number of guests is within allowed range
+    //Used to set submit button as disabled or enabled
     function getIsFormValid() {
         return props.firstName && props.lastName && props.date && props.time && props.guests>=1 && props.guests<=10;
     };
 
     return(
         <form id="bookingForm" onSubmit={props.submitFunction}>
-            <p id="firstNameInput">
+            <div id="firstNameInput">
                 <label htmlFor="firstName">First Name</label>
                 <input type="text" id="firstName" name="firstName" value={props.firstName} onChange={(e) => props.setFirstName(e.target.value)} onFocus={()=> setFirstNameTouched(true)}  placeholder="First Name"/>
+                {/**If the user has click the field but not entered any values, show message that field is required*/}
                 {firstNameTouched && props.firstName.length < 1 ? <p className="errorMessage">*Required Field</p> : null}
-            </p>
-            <p id="lastNameInput">
+            </div>
+            <div id="lastNameInput">
                 <label htmlFor="lastName">Last Name</label>
                 <input type="text" id="lastName" name="lastName" value={props.lastName} onChange={(e) => props.setLastName(e.target.value)} onFocus={()=> setLastNameTouched(true)} placeholder="Last Name"/>
-                {lastNameTouched && props.lastName.length < 1 ? <p className="errorMessage">* Required Field</p> : null}
-            </p>
+                {/**If the user has click the field but not entered any values, show message that field is required*/}
+                {lastNameTouched && props.lastName.length < 1 ? <p className="errorMessage">*Required Field</p> : null}
+            </div>
             <p id="dateInput">
                 <label htmlFor="date">Date</label>
                 <input type="date" id="date" name="date" min={todayString} value={props.date} onChange={(e) => {

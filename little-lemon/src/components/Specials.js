@@ -1,3 +1,6 @@
+/**Specials Component: Calls the Card component to make cards for each weekly special.
+ * Provides image, price, and description.
+*/
 import '../css/Specials.css';
 import Card from "./Card";
 import saladPhoto from '../images/greek salad.jpg';

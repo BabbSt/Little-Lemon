@@ -48,7 +48,7 @@ test("test form can't submit without first name", ()=>{
 
   const firstNameField = screen.getByLabelText('First Name');
   fireEvent.focus(firstNameField);
-  expect(screen.getByText("Required Field")).toBeInTheDocument();
+  expect(screen.getByText("*Required Field")).toBeInTheDocument();
 
   const submitButton = screen.getByRole('button');
   expect(submitButton).toHaveAttribute('disabled');
@@ -63,7 +63,7 @@ test("test form can't submit without last name", ()=>{
 
   const lastNameField = screen.getByLabelText('Last Name');
   fireEvent.focus(lastNameField);
-  expect(screen.getByText("Required Field")).toBeInTheDocument();
+  expect(screen.getByText("*Required Field")).toBeInTheDocument();
 
   const submitButton = screen.getByRole('button');
   expect(submitButton).toHaveAttribute('disabled');

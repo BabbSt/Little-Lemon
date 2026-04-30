@@ -1,3 +1,4 @@
+/**Review Component:  Builds out the testimonial reviews*/
 import star from '../images/star.png';
 
 function Review(props){

@@ -1,8 +1,9 @@
+/**Navigation component: The site's main navigation used accross the entire website*/
 import { Link } from "react-router-dom";
 
 function Nav(){
     return (
-    <nav id="mainNav">
+    <nav id="mainNav" aria-label="Main">
         <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link>About</Link></li>
