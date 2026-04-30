@@ -5,7 +5,7 @@
 import { useState } from "react";
 
 function BookingForm(props){
-
+    //Builds out available time options to list in select based on data retrieved from API in main component
     const times = props.availableTimes.map((time)=>{
         return <option key={time} value={time}>{time}</option>
     })
@@ -51,10 +51,12 @@ function BookingForm(props){
                     {times}
                 </select>
             </p>
-            <p id="guestInput">
+            <div id="guestInput">
                 <label htmlFor="guests">Number of guests</label>
                 <input type="number" id="guests" name="guests" min="1" max="10" value={props.guests} onChange={(e) => props.setGuests(e.target.value)}></input>
-            </p>
+                {/**If the user provides a value less than 1 or greater than 10 an error message is shown*/}
+                {props.guests < 1 || props.guests>10 ? <p className="errorMessage">*Party size must be between 1 & 10 guests</p> : null}
+            </div>
             <p id="occasionInput">
                 <label htmlFor="occasion">Occasion (optional)</label>
                 <select id="occasion" name="occasion" value={props.occasion} onChange={(e) => props.setOccasion(e.target.value)}>

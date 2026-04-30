@@ -45,6 +45,7 @@
 
 #guestInput{
     grid-area: guests;
+    margin: 16px 0;
 }
 
 #occasionInput{
